@@ -24,5 +24,6 @@ h1{
     }
 
     .affinity-img {
-        width: 100%;
+        width: 2000px; /* Adjust this value as needed */
+        height: auto; /* Keeps the aspect ratio intact */
       }
