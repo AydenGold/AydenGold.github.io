@@ -6,3 +6,13 @@ h1{
     color:rgb(235, 55, 115);
     text-align: center;
 }
+
+.projects { display:flex; flex-wrap:wrap; }
+
+.project {
+    width: 30%;
+    margin: 10px;
+    padding: 20px 10px;
+    background: rgb(244, 11, 11); 
+    border-radius: 25%;
+    }
