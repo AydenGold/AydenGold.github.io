@@ -16,3 +16,8 @@ h1{
     background: rgb(244, 11, 11); 
     border-radius: 25%;
     }
+
+    .Affinity_IMG {
+        width: 500px;
+        height: auto;
+      }
