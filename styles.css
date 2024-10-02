@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(27, 234, 58);
+    background-color: rgb(39, 76, 45);
     font-family: Arial, Helvetica, sans-serif;
 }
 h1{
-    color:rgb(235, 55, 115);
+    color:rgb(0, 0, 0);
     text-align: center;
 }
 
@@ -19,7 +19,7 @@ h1{
     width: 30%;
     margin: 10px;
     padding: 20px 10px;
-    background: rgb(244, 11, 11); 
+    background: rgb(14, 30, 110); 
     border-radius: 25%;
     }
 
