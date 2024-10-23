@@ -45,3 +45,6 @@ h1{
     text-align: center;
     margin: 15px;
     }
+    h1 {
+        font-size: 20px;
+    }
