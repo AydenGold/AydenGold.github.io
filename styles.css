@@ -19,10 +19,8 @@ h1{
     width: 30%;
     margin: 10px;
     padding: 20px 10px;
-    background: rgb(14, 30, 110);
+    background: rgb(14, 30, 110); 
     border-radius: 25%;
-    border: 5px solid rgb(14, 30, 110); /* Define the width for uniformity */
-    box-sizing: border-box; /* Includes border in width calculation */
     }
 
 /*.affinity-img {
