@@ -8,11 +8,11 @@ h1{
 }
 
 .projects { 
-    display:flex; 
-    flex-wrap:wrap; 
-    justify-content:center;    
-    align-items:center;        
-    text-align:center;         
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;    
+    align-items: stretch; /* Ensure all items stretch to the same height */
+    text-align: center;                 
 }
 
 .project {
