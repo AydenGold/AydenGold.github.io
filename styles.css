@@ -11,7 +11,7 @@ h1{
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;    
-    align-items: stretch; /* Ensure all items stretch to the same height */
+    align-items: flex-start; /* Ensure all items stretch to the same height */
     text-align: center;                 
 }
 
