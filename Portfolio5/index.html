@@ -159,45 +159,191 @@
 <div class="project-card">
     <img src="project4.jpg" alt="Project 4">
     <h2>Code Sample 4</h2>
-    <p>Takes two numbers and gives back all the even numbers between them.</p>
+    <p>A custom Choice game with good and bad endings.</p>
     <a href="#" class="btn" onclick="toggleCode('codeBlock4')">View Project</a>
 
     <div id="codeBlock4" class="code-block">
         <!-- Code for Project 1 -->
         <pre>
-            import java.util.Scanner;
-            public class EvenList {
-            
-                public static void main(String[] args) {
-                    
-                    Scanner key = new Scanner(System.in);
-                    
-                    //prompts user for lower bound
-                    System.out.println("Enter the lower bound of a range of numbers: ");
-                    //creates integer variable for minimum of range
-                    int lower = key.nextInt();
-                    
-                    //prompts user for upper bound
-                    System.out.println("Enter the upper bound of a range of numbers: ");
-                    //creates integer variable for maximum of range
-                    int upper = key.nextInt();
-                    //initializes i=lower
-                    //sets conditions
-                    //for(initialization, condition, Update)
-                    for(int i=lower; i<=upper; i++)
-                    {
-                        if(i%2==0)
-                        {
-                            System.out.println(i+" ");
-                        }
-                    }
-                    
-                    
-                    
-            
-                }
-            
-            }
+import java.util.Scanner;
+public class Homework2 {
+
+	public static void main(String[] args) {
+
+
+		//Ayden Goldhammer
+		
+		Scanner key = new Scanner(System.in);
+		//scanner 
+		
+		int enteredPassword = 0;
+		//password variable for later
+		
+		int correctPassword = 1234;
+		//correct password
+		
+		Boolean weapon = false;
+		//condition variable
+		
+		Boolean code = false;
+		//condition variable
+		
+		
+		
+		System.out.println("you wake up in a dungeon with a rusty lock, do you try to escape or wait? option 1: escape, option 2: wait");
+		//starting prompt
+		//escape or wait
+		
+		String response = key.next();
+		
+		if (response.equalsIgnoreCase("escape"))
+		{
+			System.out.println("you hit at the rusty lock and it falls off");
+		}
+		else if(response.equalsIgnoreCase("wait"))
+		{
+			System.out.println("a man in a cloak stands in front of your cell");
+		}
+		else
+		{
+			System.out.println("Something went wrong with your response!");
+		}
+		//error message
+		
+		if (response.equalsIgnoreCase("wait"))
+		{
+			System.out.println("The man informs you that you will be stuck here for a while option 1: question, option 2: silence");
+			response = key.next();
+		}
+		//question him or stay silent
+		if(response.equalsIgnoreCase("question"))
+		{
+			System.out.println("Bad Ending: The man in the cloak says that youre gonna be an experiment subject then shoots you with a tranquilizing dart");
+		}
+		else if(response.equalsIgnoreCase("silence"))
+		{
+			System.out.println("The man in the cloak commends your calm attitude and says he will come back later, option 1: escape, option 2: wait");
+			response = key.next();
+		}
+		//escape or wait
+		
+		if (response.equalsIgnoreCase("wait"))
+		{
+			System.out.println("You are brought to a lab as an experiment do you go wild and break things or cooperate, option 1: wild, option 2: cooperate");
+			response = key.next();
+		}
+		//go wild or cooperate
+		if (response.equalsIgnoreCase("wild"))
+		{
+			System.out.println("Bad Ending: you break open a container of poisonous gas killing everyone");
+		}
+		//you go wild and die
+		if (response.equalsIgnoreCase("cooperate"))
+		{
+			System.out.println("Bad Ending: you are an experiment subject for the rest of your life");
+		}
+		//bad ending
+		
+		if (response.equalsIgnoreCase("escape"))
+		{
+			System.out.println("Search around the room or run away? option 1: search, option 2: run");
+			response = key.next();
+		}
+		//search or run
+		if(response.equalsIgnoreCase("search"))
+		{
+			System.out.println("You search around the room and find a key and a code on paper(1234), but then you hear footsteps down the hallway.\n option 1: hide, option 2: flee, option 3: fight");
+			code = true;
+			response = key.next();
+		}
+		//you obtain the code, hide flee or fight
+		else if(response.equalsIgnoreCase("run"))
+		{
+			System.out.println("You run until you find stairs out of the dungeon but the door at the top of the stairs is locked.\n kick down the door or go back to your cell. option 1: kick, option 2: back");
+			response = key.next();
+		}
+		//kick the door or go back. This is a dead end
+		else
+		{
+			System.out.println("Something went wrong with your response!");
+		}
+		//error message
+		
+		if(response.equalsIgnoreCase("hide"))
+		{
+			System.out.println("Bad Ending: The man in the cloak finds you quickly and recaptures you");
+		}
+		if(response.equalsIgnoreCase("flee"))
+		{
+			System.out.println("You run up the stairs and see a locked door, option 1: key, option 2: back");
+			response = key.next();
+		}
+		//open the door with key or go back
+		if(response.equalsIgnoreCase("back"))
+		{
+			System.out.println("Bad Ending: You walk right back to the cloaked man and he recaptures you");
+		}
+		//bad ending
+		if(response.equalsIgnoreCase("kick"))
+		{
+			System.out.println("Bad Ending: The door was too sturdy for you feeble legs and you get caught trying to escape");
+		}
+		//bad ending
+		if(response.equalsIgnoreCase("fight"))
+		{
+			System.out.println("Bad Ending: You pick up a pole and start swinging it at the cloaked man but he is unfazed");
+		}
+		//bad ending
+		
+		if(response.equalsIgnoreCase("key"))
+		{
+			System.out.println("You finally escape the dungeon but now you have to escape the house that appears to have no windows, option 1: door, option 2: upstairs");
+			response = key.next();
+		}
+		//go to the door or go upstairs
+		if(response.equalsIgnoreCase("upstairs"))
+		{
+			System.out.println("after going upstairs you find a weapon");
+			weapon = true;
+		}
+		//now you can defend yourself
+		if(response.equalsIgnoreCase("door") && code==true)
+		{
+			System.out.println("The door requires a code, RESPOND WITH THE CODE TO WIN");
+			enteredPassword = key.nextInt();
+		}
+		//win condition here
+		if(response.equalsIgnoreCase("upstairs"))
+		{
+			System.out.println("This is your final stand, choose method of attack: option 1:headon option 2: suprise");
+		}
+		//fight scene
+		if(response.equalsIgnoreCase("headon"))
+		{
+			System.out.println("Bad Ending: The Cloaked man is way more skilled than you and recaptures you");
+		}
+		//bad ending
+		if(response.equalsIgnoreCase("suprise"))
+		{
+			System.out.println("Good ending: You get a suprise attack and win against the Cloaked man and then you eventually escape");
+		}
+		//you Win
+		if(enteredPassword==correctPassword)
+		{
+			System.out.println("Good Ending: You escape ");
+		}
+		//you Win
+		else
+		{
+			System.out.println("Bad Ending: You forgot the Password? You are stuck here forever");
+		}
+		//bad ending
+		
+		
+		
+	}
+
+}
         </pre>
     </div>
 </div>
