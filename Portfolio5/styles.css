@@ -61,7 +61,7 @@ header {
 }
 
 
-    .btn {
+.btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff;
@@ -69,11 +69,11 @@ header {
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
-    }
-    .btn:hover {
+  }
+  .btn:hover {
     background-color: #0056b3;
-    }
-    .code-block {
+  }
+  .code-block {
     display: none; /* Initially hidden */
     margin-top: 10px;
     padding: 10px;
@@ -81,4 +81,7 @@ header {
     border: 1px solid #ddd;
     font-family: monospace;
     white-space: pre-wrap;
-    }
+    overflow-x: auto; /* Horizontal scrolling for long lines */
+    overflow-y: auto; /* Vertical scrolling for long blocks */
+    max-height: 300px; /* Limit the height */
+  }
