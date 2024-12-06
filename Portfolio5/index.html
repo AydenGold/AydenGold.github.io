@@ -3,6 +3,12 @@
 <head>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down Code</title>
+    
+
 </head>
 <body>
     <header>
@@ -13,7 +19,7 @@
     <section class="projects">
         <div class="project-card">
             <img src="project1.jpg" alt="Project 1">
-            <h2>Project Title 1</h2>
+            <h2>Code Sample 1</h2>
             <p>A brief description of the project goes here. Highlight key features or technologies used.</p>
             <a href="#" class="btn">View Project</a>
         </div>
@@ -25,5 +31,30 @@
             <a href="#" class="btn">View Project</a>
         </div>
     </section>
+
+    <a href="#" class="btn" onclick="toggleCode()">View Project</a>
+
+    <div id="codeBlock" class="code-block">
+      <!-- Code to be displayed -->
+      &lt;div&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+        &lt;p&gt;This is an example.&lt;/p&gt;
+      &lt;/div&gt;
+    </div>
+    
+    <script>
+      function toggleCode() {
+        // Select the code block
+        const codeBlock = document.getElementById("codeBlock");
+        
+        // Toggle the display property
+    if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
+        codeBlock.style.display = "block"; // Show the code
+    } else {
+        codeBlock.style.display = "none"; // Hide the code
+        }
+      }
+    </script>
+
 </body>
 </html>

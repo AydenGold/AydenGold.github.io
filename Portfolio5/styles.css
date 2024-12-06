@@ -59,3 +59,26 @@ header {
 .btn:hover {
     background-color: #0056b3;
 }
+
+
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .btn:hover {
+    background-color: #0056b3;
+    }
+    .code-block {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    font-family: monospace;
+    white-space: pre-wrap;
+    }
