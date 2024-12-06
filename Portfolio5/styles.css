@@ -70,11 +70,14 @@ header {
     border: 1px solid #ddd;
     border-radius: 4px; /* Matches the card design */
     font-family: monospace; /* Preserve code formatting */
-    font-size: 12px; /* Decrease the size of the characters */
-    line-height: 1.4; /* Adjust line spacing for readability */
+    font-size: 10px; /* Make the characters even smaller */
+    line-height: 1.3; /* Adjust line spacing for readability */
     white-space: pre-wrap; /* Preserve code formatting */
     overflow-x: auto; /* Horizontal scrolling for long lines */
     overflow-y: auto; /* Vertical scrolling for long blocks */
     max-height: 300px; /* Limit the height */
+    width: 90%; /* Make the code block width more contained */
+    margin: 0 auto; /* Center the code block horizontally */
+    text-align: center; /* Center the text inside */
 }
 
