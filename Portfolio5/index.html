@@ -7,141 +7,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drop Down Code</title>
-    
-
 </head>
 <body>
     <header>
         <h1>My Projects</h1>
-        <p>Explore the work Ive done in various fields.</p>
+        <p>Explore the work I've done in various fields.</p>
     </header>
 
     <section class="projects">
+        <!-- Project 1 -->
         <div class="project-card">
             <img src="project1.jpg" alt="Project 1">
             <h2>Code Sample 1</h2>
             <p>A brief description of the project goes here. Highlight key features or technologies used.</p>
-            <a href="#" class="btn" onclick="toggleCode()">View Project</a>
+            <a href="#" class="btn" onclick="toggleCode('codeBlock1')">View Project</a>
 
-    <div id="codeBlock" class="code-block">
-    <!-- Code to be displayed -->
-  <pre>
-    import java.util.Scanner;
-    
-    public class DrawABox {
-    
-    public static void main(String[] args) {
-    
-    Scanner key = new Scanner(System.in);
-    
-    System.out.println("Enter the height of the box: ");
-    int height = key.nextInt();
-    
-    System.out.println("Enter the width of the box: ");
-    int width = key.nextInt();
-    
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width; j++) {
-            System.out.print("*");
+            <div id="codeBlock1" class="code-block">
+                <!-- Code for Project 1 -->
+                <pre>
+                import java.util.Scanner;
+                
+                public class DrawABox {
+                
+                    public static void main(String[] args) {
+                
+                        Scanner key = new Scanner(System.in);
+                
+                        System.out.println("Enter the height of the box: ");
+                        int height = key.nextInt();
+                
+                        System.out.println("Enter the width of the box: ");
+                        int width = key.nextInt();
+                
+                        for (int i = 0; i < height; i++) {
+                            for (int j = 0; j < width; j++) {
+                                System.out.print("*");
+                            }
+                            System.out.println();
+                        }
+                
+                        key.close();
+                    }
                 }
-        System.out.println();
-            }
-    
-        key.close();
-        }
-    }
-      </pre>
-    </div>
-    
-    <script>
-        function toggleCode() {
-          const codeBlock = document.getElementById("codeBlock");
-          if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
-            codeBlock.style.display = "block"; // Show the code
-          } else {
-            codeBlock.style.display = "none"; // Hide the code
-          }
-        }
-      </script>
+                </pre>
+            </div>
         </div>
 
+        <!-- Project 2 -->
         <div class="project-card">
             <img src="project2.jpg" alt="Project 2">
             <h2>Code Sample 2</h2>
             <p>A brief description of the project goes here. Highlight key features or technologies used.</p>
-            <a href="#" class="btn" onclick="toggleCode()">View Project</a>
+            <a href="#" class="btn" onclick="toggleCode('codeBlock2')">View Project</a>
 
-    <div id="codeBlock" class="code-block">
-    <!-- Code to be displayed -->
-  <pre>
-    import java.util.Random;
-    import java.util.Scanner;
-    public class RandomNumberGuesser {
-	
-	public static final int MAX = 100;
+            <div id="codeBlock2" class="code-block">
+                <!-- Code for Project 2 -->
+                <pre>
+                import java.util.Random;
+                import java.util.Scanner;
 
-	public static void main(String[] args) {
-		
-	Scanner key = new Scanner(System.in);
-		
-	Random r = new Random();
-		
-	int secretNumber = r.nextInt(100);      //generate value between 0-99
-		
-	System.out.println("i will pick a random number between 0 and 99, Can you guess it?");
-		
-	boolean correctGuess = false;
-		
-	while(correctGuess == false)
-	{
-		System.out.println("Enter you guess: ");
-			
-		int guess = key.nextInt();
-		//input validation
-		if(guess>99 || guess<0)
-		{
-			System.out.println("Invalid value entered");
-			System.exit(0);
-		}
-		if (guess < secretNumber)
-		{
-			System.out.println("your guess is too low! Pick a larger value!");
-		}
-		else if (guess > secretNumber)
-		{
-			System.out.println("your guess is too high! Pick a smaller value!");
-		}
-		else if (guess == secretNumber)
-		{
-			System.out.println("your guess is correct!!!");
-			correctGuess = true;
-		}
-		else
-		{
-			System.out.println("Invalid value entered");
-		}
-		}
+                public class RandomNumberGuesser {
 
-	}
+                    public static final int MAX = 100;
 
-}
-      </pre>
-    </div>
-    
-    <script>
-        function toggleCode() {
-          const codeBlock = document.getElementById("codeBlock");
-          if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
-            codeBlock.style.display = "block"; // Show the code
-          } else {
-            codeBlock.style.display = "none"; // Hide the code
-          }
-        }
-      </script>
+                    public static void main(String[] args) {
+
+                        Scanner key = new Scanner(System.in);
+
+                        Random r = new Random();
+
+                        int secretNumber = r.nextInt(100);      //generate value between 0-99
+
+                        System.out.println("I will pick a random number between 0 and 99, Can you guess it?");
+
+                        boolean correctGuess = false;
+
+                        while (correctGuess == false) {
+                            System.out.println("Enter your guess: ");
+
+                            int guess = key.nextInt();
+                            //input validation
+                            if (guess > 99 || guess < 0) {
+                                System.out.println("Invalid value entered");
+                                System.exit(0);
+                            }
+                            if (guess < secretNumber) {
+                                System.out.println("Your guess is too low! Pick a larger value!");
+                            } else if (guess > secretNumber) {
+                                System.out.println("Your guess is too high! Pick a smaller value!");
+                            } else if (guess == secretNumber) {
+                                System.out.println("Your guess is correct!!!");
+                                correctGuess = true;
+                            } else {
+                                System.out.println("Invalid value entered");
+                            }
+                        }
+                    }
+                }
+                </pre>
+            </div>
         </div>
     </section>
 
-    
-
+    <script>
+        function toggleCode(codeBlockId) {
+            const codeBlock = document.getElementById(codeBlockId);
+            if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
+                codeBlock.style.display = "block"; // Show the code
+            } else {
+                codeBlock.style.display = "none"; // Hide the code
+            }
+        }
+    </script>
 </body>
 </html>
