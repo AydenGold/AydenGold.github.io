@@ -24,12 +24,36 @@
             <a href="#" class="btn" onclick="toggleCode()">View Project</a>
 
     <div id="codeBlock" class="code-block">
-      <!-- Code to be displayed -->
-      &lt;div&gt;
-        &lt;h1&gt;Hello World!&lt;/h1&gt;
-        &lt;p&gt;This is an example.&lt;/p&gt;
-      &lt;/div&gt;
-    </div>
+                <!-- Code to be displayed -->
+                <pre>
+                  <code>
+              import java.util.Scanner;
+              
+              public class DrawABox {
+              
+              public static void main(String[] args) {
+              
+              Scanner key = new Scanner(System.in);
+              
+              System.out.println("Enter the height of the box: ");
+              int height = key.nextInt();
+              
+              System.out.println("Enter the width of the box: ");
+              int width = key.nextInt();
+              
+              for (int i = 0; i < height; i++) {
+                  for (int j = 0; j < width; j++) {
+                  System.out.print("*");
+                          }
+                    System.out.println();
+                      }
+              
+                    key.close();
+                  }
+              }
+                  </code>
+                </pre>
+        </div>
     
     <script>
       function toggleCode() {
