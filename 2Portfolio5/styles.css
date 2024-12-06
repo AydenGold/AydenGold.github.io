@@ -1,0 +1,55 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Sample content styling */
+.sample {
+    margin-bottom: 30px;
+}
+
+.sample p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Styling for even spacing */
+.sample:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
