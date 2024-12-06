@@ -67,9 +67,77 @@
 
         <div class="project-card">
             <img src="project2.jpg" alt="Project 2">
-            <h2>Project Title 2</h2>
+            <h2>Code Sample 2</h2>
             <p>A brief description of the project goes here. Highlight key features or technologies used.</p>
-            <a href="#" class="btn">View Project</a>
+            <a href="#" class="btn" onclick="toggleCode()">View Project</a>
+
+    <div id="codeBlock" class="code-block">
+    <!-- Code to be displayed -->
+  <pre>
+    import java.util.Random;
+    import java.util.Scanner;
+    public class RandomNumberGuesser {
+	
+	public static final int MAX = 100;
+
+	public static void main(String[] args) {
+		
+	Scanner key = new Scanner(System.in);
+		
+	Random r = new Random();
+		
+	int secretNumber = r.nextInt(100);      //generate value between 0-99
+		
+	System.out.println("i will pick a random number between 0 and 99, Can you guess it?");
+		
+	boolean correctGuess = false;
+		
+	while(correctGuess == false)
+	{
+		System.out.println("Enter you guess: ");
+			
+		int guess = key.nextInt();
+		//input validation
+		if(guess>99 || guess<0)
+		{
+			System.out.println("Invalid value entered");
+			System.exit(0);
+		}
+		if (guess < secretNumber)
+		{
+			System.out.println("your guess is too low! Pick a larger value!");
+		}
+		else if (guess > secretNumber)
+		{
+			System.out.println("your guess is too high! Pick a smaller value!");
+		}
+		else if (guess == secretNumber)
+		{
+			System.out.println("your guess is correct!!!");
+			correctGuess = true;
+		}
+		else
+		{
+			System.out.println("Invalid value entered");
+		}
+		}
+
+	}
+
+}
+      </pre>
+    </div>
+    
+    <script>
+        function toggleCode() {
+          const codeBlock = document.getElementById("codeBlock");
+          if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
+            codeBlock.style.display = "block"; // Show the code
+          } else {
+            codeBlock.style.display = "none"; // Hide the code
+          }
+        }
+      </script>
         </div>
     </section>
 
